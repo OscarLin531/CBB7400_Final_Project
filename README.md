@@ -46,3 +46,26 @@ We will classify participants with both test results into four groups: both nega
 Our main outcome is the weighted proportion who are FPG-positive but HbA1c-negative. We will also estimate test disagreement and examine healthcare access. The analysis will account for the NHANES survey design and differences in glucose measurement across cycles.
 
 The analysis notebook, figures, two-page report, slides, and a simple follow-up alert prototype will be added as the project progresses. These dependencies cover downloading data and basic notebook work; survey-analysis dependencies will be added when that implementation is ready.
+
+## Data cleaning and team handoff
+
+The preparation pipeline is in [`data_cleaning/`](data_cleaning/README.md).
+It produces a full 29,400-row master table, A/B sample flags, and unweighted QC
+reports. See the [processing rules](data_cleaning/PROCESSING.md) and
+[variable dictionary](data_cleaning/variable_dictionary.csv) before analysis.
+
+The current checkout includes all 24 raw XPT files. The `download_nhanes.py`
+script and `data/codebooks/` directory mentioned above are not included in this
+checkout. Use the included raw files to run the cleaning pipeline; official
+codebook links are listed in [data documentation](data_cleaning/SOURCES.md).
+
+After installing the dependencies above, run from the repository root:
+
+```bash
+python3 data_cleaning/clean_data.py
+python3 -m unittest discover -s data_cleaning/tests -v
+```
+
+Outputs are saved in `data/processed/v0.1/`. Generated participant-level master
+CSV files are ignored by Git; small QC reports and release metadata are kept
+for review. Survey-weighted analysis is a later step.

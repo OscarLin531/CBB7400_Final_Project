@@ -1,0 +1,57 @@
+variable,source,definition,units_or_type,processing_rule,missing_handling
+cycle,File directory,NHANES survey cycle,text,2013-2014; 2015-2016; 2017-2018,Not missing
+SEQN,DEMO,Participant identifier,integer,Unique within cycle; join key,NA means missing; never assume No or normal.
+RIDSTATR,DEMO,Interview and examination status,category,1=interview only; 2=interview and MEC examination,NA means missing; never assume No or normal.
+RIDAGEYR,DEMO,Age at screening,years,Restore tiny XPT zero artifacts to age 0; use >=20 for adult flag; public-use age is top-coded at 80,NA means missing; never assume No or normal.
+RIAGENDR,DEMO,Recorded sex variable,category,1=male; 2=female; not gender identity,NA means missing; never assume No or normal.
+RIDRETH3,DEMO,Race and Hispanic origin,category,1=Mexican American; 2=other Hispanic; 3=non-Hispanic White; 4=non-Hispanic Black; 6=non-Hispanic Asian; 7=other including multiracial,NA means missing; never assume No or normal.
+RIDEXPRG,DEMO,Public pregnancy status at examination,category,1=pregnant; 2=not pregnant; 3=cannot determine; public information restricted to females aged 20-44,NA means missing; never assume No or normal.
+WTMEC2YR,DEMO,Two-year MEC examination weight,weight,Normalize nonnegative values <1e-10 to zero; preserve reader value in WTMEC2YR_read,NA means missing; never assume No or normal.
+WTSAF2YR,GLU,Two-year fasting subsample weight,weight,Normalize nonnegative values <1e-10 to zero; preserve reader value in WTSAF2YR_read,NA means missing; never assume No or normal.
+SDMVSTRA,DEMO,Masked variance stratum,integer,Retain published identifiers for survey design,NA means missing; never assume No or normal.
+SDMVPSU,DEMO,Masked primary sampling unit,integer,Retain published identifiers; PSU is nested within stratum,NA means missing; never assume No or normal.
+DIQ010,DIQ,Doctor told participant they have diabetes,category,1=yes; 2=no; 3=borderline; 7=refused; 9=do not know; retain raw code,NA means missing; never assume No or normal.
+LBXGH,GHB,Published glycated hemoglobin,percent,Preserve published value; positive finite value required for availability,NA means missing; never assume No or normal.
+LBXGLU,GLU,Published fasting plasma glucose,mg/dL,Preserve published mg/dL value; do not replace with harmonized value,NA means missing; never assume No or normal.
+PHAFSTHR,FASTQX,Food fasting duration: hours component,hours,Use FASTQX in all cycles; restore tiny XPT zero artifacts; auxiliary QC only,NA means missing; never assume No or normal.
+PHAFSTMN,FASTQX,Food fasting duration: minutes component,minutes,Use FASTQX in all cycles; restore tiny XPT zero artifacts; auxiliary QC only,NA means missing; never assume No or normal.
+PHAFSTHR_glu,GLU_H,Alternative food fasting duration: hours,hours,Retain for 2013-2014 source comparison only,NA means missing; never assume No or normal.
+PHAFSTMN_glu,GLU_H,Alternative food fasting duration: minutes,minutes,Retain for 2013-2014 source comparison only,NA means missing; never assume No or normal.
+HIQ011,HIQ,Covered by health insurance,category,1=yes; 2=no; 7=refused; 9=do not know,NA means missing; never assume No or normal.
+HUQ030,HUQ,Usual place for healthcare,category,1=one place; 2=no place; 3=more than one place; 7=refused; 9=do not know,NA means missing; never assume No or normal.
+HUQ051,HUQ,Healthcare visit frequency in past year,category,0=none; 1=1; 2=2-3; 3=4-5; 4=6-7; 5=8-9; 6=10-12; 7=13-15; 8=16+; 77=refused; 99=do not know. Restore tiny zero artifact; not a continuous count,NA means missing; never assume No or normal.
+BMXBMI,BMX,Body mass index,kg/m^2,Retain published value; no imputation or outlier deletion,NA means missing; never assume No or normal.
+diq_record_present,DIQ,Whether a source record exists for this DEMO participant,boolean,True if matched by SEQN; False if no source row,Never missing
+ghb_record_present,GHB,Whether a source record exists for this DEMO participant,boolean,True if matched by SEQN; False if no source row,Never missing
+glu_record_present,GLU,Whether a source record exists for this DEMO participant,boolean,True if matched by SEQN; False if no source row,Never missing
+fastqx_record_present,FASTQX,Whether a source record exists for this DEMO participant,boolean,True if matched by SEQN; False if no source row,Never missing
+hiq_record_present,HIQ,Whether a source record exists for this DEMO participant,boolean,True if matched by SEQN; False if no source row,Never missing
+huq_record_present,HUQ,Whether a source record exists for this DEMO participant,boolean,True if matched by SEQN; False if no source row,Never missing
+bmx_record_present,BMX,Whether a source record exists for this DEMO participant,boolean,True if matched by SEQN; False if no source row,Never missing
+WTMEC2YR_read,pandas.read_sas,Unmodified reader value of WTMEC2YR,weight,Keep tiny residuals for audit; do not use in analysis,NA means missing; never assume No or normal.
+WTSAF2YR_read,pandas.read_sas,Unmodified reader value of WTSAF2YR,weight,Keep tiny residuals for audit; do not use in analysis,NA means missing; never assume No or normal.
+mec_weight_6yr,Derived,Six-year MEC weight,weight,WTMEC2YR / 3,See processing rule; eligibility flags are False when required information is missing.
+fasting_weight_6yr,Derived,Six-year fasting weight,weight,WTSAF2YR / 3,See processing rule; eligibility flags are False when required information is missing.
+diabetes_history,Derived,Diabetes history and response status,category,yes; no; borderline; refused; dont_know; not_in_diq; item_missing,See processing rule; eligibility flags are False when required information is missing.
+pregnancy_status,Derived,Public pregnancy information,category,known_pregnant; not_pregnant; cannot_determine; no_public_information,See processing rule; eligibility flags are False when required information is missing.
+known_pregnancy,Derived,Known pregnancy exclusion flag,boolean,RIDEXPRG=1 only; False does not prove nonpregnancy,See processing rule; eligibility flags are False when required information is missing.
+pregnancy_uncertain,Derived,Uncertain reported pregnancy status,boolean,RIDEXPRG=3; use for optional sensitivity exclusion,See processing rule; eligibility flags are False when required information is missing.
+insured,Derived,Insurance response,category,yes; no; refused; dont_know; missing,See processing rule; eligibility flags are False when required information is missing.
+usual_care_category,Derived,Original usual-care categories as labels,category,one_place; no_place; multiple_places; refused; dont_know; missing,See processing rule; eligibility flags are False when required information is missing.
+usual_care,Derived,Grouped usual-care response,category,"HUQ030 in {1,3}=yes; 2=no; retain nonresponse labels",See processing rule; eligibility flags are False when required information is missing.
+visit_frequency,Derived,Categorical visit-frequency labels,category,none; 1; 2_to_3; 4_to_5; 6_to_7; 8_to_9; 10_to_12; 13_to_15; 16_or_more; refused; dont_know; missing,See processing rule; eligibility flags are False when required information is missing.
+fpg_harmonized,Derived,FPG on the newer instrument scale,mg/dL,2013-2014: 1.023*LBXGLU-0.5108; other cycles: LBXGLU,See processing rule; eligibility flags are False when required information is missing.
+adult_eligible,Derived,Adult age eligibility,boolean,RIDAGEYR >=20; missing age gives False,See processing rule; eligibility flags are False when required information is missing.
+no_prior_diabetes,Derived,Explicit denial of prior diabetes diagnosis,boolean,DIQ010=2 only,See processing rule; eligibility flags are False when required information is missing.
+hba1c_available,Derived,Usable HbA1c measurement,boolean,LBXGH finite and >0; no arbitrary outlier exclusion,See processing rule; eligibility flags are False when required information is missing.
+fpg_available,Derived,Usable harmonized FPG measurement,boolean,fpg_harmonized finite and >0; does not establish fasting eligibility,See processing rule; eligibility flags are False when required information is missing.
+mec_weight_positive,Derived,Positive usable MEC weight,boolean,Normalized WTMEC2YR finite and >0,See processing rule; eligibility flags are False when required information is missing.
+fasting_weight_positive,Derived,Positive usable fasting weight,boolean,Normalized WTSAF2YR finite and >0; do not infer from FPG presence,See processing rule; eligibility flags are False when required information is missing.
+design_available,Derived,Survey variance fields present,boolean,SDMVSTRA and SDMVPSU both nonmissing,See processing rule; eligibility flags are False when required information is missing.
+cohort_a,Derived,HbA1c analytic domain,boolean,Adult; DIQ010=2; not RIDEXPRG=1; RIDSTATR=2; positive MEC weight; design fields; HbA1c available,See processing rule; eligibility flags are False when required information is missing.
+cohort_b,Derived,Paired-test analytic domain,boolean,cohort_a and fpg_available and fasting_weight_positive,See processing rule; eligibility flags are False when required information is missing.
+hba1c_positive,Derived,HbA1c screening threshold,nullable boolean,LBXGH >=6.5; NA if measurement unavailable,See processing rule; eligibility flags are False when required information is missing.
+fpg_positive,Derived,FPG screening threshold,nullable boolean,fpg_harmonized >=126; NA if measurement unavailable,See processing rule; eligibility flags are False when required information is missing.
+phenotype,Derived,Paired-test screening category,category,In B: neither_positive; hba1c_only; fpg_only; both_positive. Outside B: not_in_cohort_b,See processing rule; eligibility flags are False when required information is missing.
+fpg_classification_changed,Derived,Threshold classification changed by bridging,nullable boolean,Compare raw and harmonized FPG >=126; only for available measurements; all cycles retained for QC,See processing rule; eligibility flags are False when required information is missing.
+data_version,Derived,Handoff dataset version,text,0.1; check release_metadata.json for checksum and software versions,See processing rule; eligibility flags are False when required information is missing.

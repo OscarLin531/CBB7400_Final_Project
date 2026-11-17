@@ -1,0 +1,33 @@
+cycle,stage,exclusion_reason,previous_n,excluded_n,retained_n
+2013-2014,01_all_demo,Start with all DEMO records,10175,0,10175
+2013-2014,02_adults,Age missing or below 20,10175,4406,5769
+2013-2014,03_no_prior_diabetes,DIQ010 is not explicitly No (2),5769,899,4870
+2013-2014,04_pregnancy_rule,Known pregnancy (RIDEXPRG=1),4870,63,4807
+2013-2014,05_mec_design,"Not MEC-examined, MEC weight not positive, or design fields missing",4807,161,4646
+2013-2014,06_cohort_a,HbA1c unavailable,4646,160,4486
+2013-2014,07_fpg_available,FPG unavailable,4486,2316,2170
+2013-2014,08_cohort_b,No positive fasting weight,2170,150,2020
+2015-2016,01_all_demo,Start with all DEMO records,9971,0,9971
+2015-2016,02_adults,Age missing or below 20,9971,4252,5719
+2015-2016,03_no_prior_diabetes,DIQ010 is not explicitly No (2),5719,978,4741
+2015-2016,04_pregnancy_rule,Known pregnancy (RIDEXPRG=1),4741,68,4673
+2015-2016,05_mec_design,"Not MEC-examined, MEC weight not positive, or design fields missing",4673,203,4470
+2015-2016,06_cohort_a,HbA1c unavailable,4470,236,4234
+2015-2016,07_fpg_available,FPG unavailable,4234,2254,1980
+2015-2016,08_cohort_b,No positive fasting weight,1980,149,1831
+2017-2018,01_all_demo,Start with all DEMO records,9254,0,9254
+2017-2018,02_adults,Age missing or below 20,9254,3685,5569
+2017-2018,03_no_prior_diabetes,DIQ010 is not explicitly No (2),5569,1052,4517
+2017-2018,04_pregnancy_rule,Known pregnancy (RIDEXPRG=1),4517,55,4462
+2017-2018,05_mec_design,"Not MEC-examined, MEC weight not positive, or design fields missing",4462,255,4207
+2017-2018,06_cohort_a,HbA1c unavailable,4207,203,4004
+2017-2018,07_fpg_available,FPG unavailable,4004,2085,1919
+2017-2018,08_cohort_b,No positive fasting weight,1919,112,1807
+total,01_all_demo,Start with all DEMO records,29400,0,29400
+total,02_adults,Age missing or below 20,29400,12343,17057
+total,03_no_prior_diabetes,DIQ010 is not explicitly No (2),17057,2929,14128
+total,04_pregnancy_rule,Known pregnancy (RIDEXPRG=1),14128,186,13942
+total,05_mec_design,"Not MEC-examined, MEC weight not positive, or design fields missing",13942,619,13323
+total,06_cohort_a,HbA1c unavailable,13323,599,12724
+total,07_fpg_available,FPG unavailable,12724,6655,6069
+total,08_cohort_b,No positive fasting weight,6069,411,5658
