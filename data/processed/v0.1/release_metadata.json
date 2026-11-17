@@ -1,0 +1,183 @@
+{
+  "data_version": "0.1",
+  "master_file": "master_v0.1.csv",
+  "rows": 29400,
+  "columns": 56,
+  "master_sha256": "7ab87b7f62a3ee56f059429943dc26bce6ee298bb792ae9e3c88688c56a833aa",
+  "script_sha256": "d287a022607b2339210d9260ab3584f170d952768048801046b189fbdeec2b31",
+  "dictionary_sha256": "9fe0673905d5555e618db3322543088fb4ac64214a55e90325393097f49412b1",
+  "pandas_version": "2.2.2",
+  "numpy_version": "2.0.0",
+  "weight_zero_tolerance": 1e-10,
+  "xpt_zero_tolerance": 1e-70,
+  "sources": [
+    {
+      "cycle": "2013-2014",
+      "module": "DEMO",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DEMO_H.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DEMO_H.htm",
+      "sha256": "f8f0cbb3085a323d4cde22349b164878fea1e64dbc404e65b5815c7816b547d7"
+    },
+    {
+      "cycle": "2013-2014",
+      "module": "DIQ",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DIQ_H.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DIQ_H.htm",
+      "sha256": "c74c7ccef65e6997dfac1db1e73bc3f63dec67c70b2e322ffc14f14ce27429a9"
+    },
+    {
+      "cycle": "2013-2014",
+      "module": "GHB",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/GHB_H.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/GHB_H.htm",
+      "sha256": "0695894ad55ac96f315a8415401977b0856c402d16762115b534bcd5dfeae89e"
+    },
+    {
+      "cycle": "2013-2014",
+      "module": "GLU",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/GLU_H.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/GLU_H.htm",
+      "sha256": "8aa3a41a8135eea6ad761bf7711ec18b29698d76aca3ae8fe487ef89ec9631da"
+    },
+    {
+      "cycle": "2013-2014",
+      "module": "FASTQX",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/FASTQX_H.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/FASTQX_H.htm",
+      "sha256": "831db25e3a963ae2d6af6d4f97d96a175873f71d764a2da77989a91bfcb1398b"
+    },
+    {
+      "cycle": "2013-2014",
+      "module": "HIQ",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/HIQ_H.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/HIQ_H.htm",
+      "sha256": "1c2eec87f78f361cc8989973516bb8dd1b371da2cc70349dc6c84066c878a21e"
+    },
+    {
+      "cycle": "2013-2014",
+      "module": "HUQ",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/HUQ_H.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/HUQ_H.htm",
+      "sha256": "a35e8ca0c5b7ca6a86a8d787cbd0c3132a10ef5f66b8b432c57885f7bbaa04dd"
+    },
+    {
+      "cycle": "2013-2014",
+      "module": "BMX",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BMX_H.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/BMX_H.htm",
+      "sha256": "fd5e9fc6e6aab0a4aee6e699f51497bbc9b62101f7f43aee924c473e38fd9442"
+    },
+    {
+      "cycle": "2015-2016",
+      "module": "DEMO",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.htm",
+      "sha256": "c9297c6c37ae8f78f29be9568fa2a03cf3b112616a39afee04030fc775a66a0d"
+    },
+    {
+      "cycle": "2015-2016",
+      "module": "DIQ",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DIQ_I.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DIQ_I.htm",
+      "sha256": "e87587479b29f175b63eee5dd40d582837e3e3fe2665503012085eefdb978e0d"
+    },
+    {
+      "cycle": "2015-2016",
+      "module": "GHB",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/GHB_I.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/GHB_I.htm",
+      "sha256": "e4bc626cd12f6057c7806aef4f85874c9bf1407a7480d6621a4af142260addd2"
+    },
+    {
+      "cycle": "2015-2016",
+      "module": "GLU",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/GLU_I.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/GLU_I.htm",
+      "sha256": "3a52f14346060819c79faa8d646c1dfc33d5a85c1df13d23e10aa4fff0d1bb87"
+    },
+    {
+      "cycle": "2015-2016",
+      "module": "FASTQX",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/FASTQX_I.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/FASTQX_I.htm",
+      "sha256": "a586c7d9ece227112398e7e4c89c9fda9c158b9f213f0731f1a106e5acc0a265"
+    },
+    {
+      "cycle": "2015-2016",
+      "module": "HIQ",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/HIQ_I.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/HIQ_I.htm",
+      "sha256": "08ff064a49bb59f4ec78c6f97095a4fd42e1d55db7d8884fcb34f7c722e943c2"
+    },
+    {
+      "cycle": "2015-2016",
+      "module": "HUQ",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/HUQ_I.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/HUQ_I.htm",
+      "sha256": "583c2a8ff7268900871e04e8c381c17f1fd64b3f549c9f27a198720f653500b0"
+    },
+    {
+      "cycle": "2015-2016",
+      "module": "BMX",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BMX_I.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BMX_I.htm",
+      "sha256": "d31da84e14212b4e58e8340598a5b8e2144fac83333563e966eb1b332e4141d6"
+    },
+    {
+      "cycle": "2017-2018",
+      "module": "DEMO",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DEMO_J.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DEMO_J.htm",
+      "sha256": "c0b46e0345ea19404928656277c8b0d10b0cca348a9b2fe4fc3c67e8b7ee73ec"
+    },
+    {
+      "cycle": "2017-2018",
+      "module": "DIQ",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DIQ_J.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DIQ_J.htm",
+      "sha256": "1ecbf5360dfc331d1efbf32198553dc30e9a1f4cff0a907ed30ca72bac797f89"
+    },
+    {
+      "cycle": "2017-2018",
+      "module": "GHB",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/GHB_J.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/GHB_J.htm",
+      "sha256": "35f07094573a0061a03ed609a5a363b34eb1b1c7065d1623b43d72e132a8a654"
+    },
+    {
+      "cycle": "2017-2018",
+      "module": "GLU",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/GLU_J.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/GLU_J.htm",
+      "sha256": "5b38897d0d7bfbc69dd9ca74ffdaf2f6a9bed5a91d4a7bf46e07f1332cc3379e"
+    },
+    {
+      "cycle": "2017-2018",
+      "module": "FASTQX",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/FASTQX_J.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/FASTQX_J.htm",
+      "sha256": "f28e3f41ab423e712c7a70c1952a1a257096b153765840f4f10929c0721e44c1"
+    },
+    {
+      "cycle": "2017-2018",
+      "module": "HIQ",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HIQ_J.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HIQ_J.htm",
+      "sha256": "96dfdd98507ea6dc67cb2c2b6999da3c035f3f8a9a87cf34756fe30762387860"
+    },
+    {
+      "cycle": "2017-2018",
+      "module": "HUQ",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HUQ_J.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/HUQ_J.htm",
+      "sha256": "0d8814ca6a72c003eb89885a3a24dcff3b475dfed454089cf4890f9ab9da06d2"
+    },
+    {
+      "cycle": "2017-2018",
+      "module": "BMX",
+      "source_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BMX_J.xpt",
+      "codebook_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/BMX_J.htm",
+      "sha256": "8d675e42d8826ac98714b2c3dd4c5138a5e353fb4424f7eff5e6db4a01ce838a"
+    }
+  ]
+}

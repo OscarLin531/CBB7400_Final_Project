@@ -1,0 +1,9 @@
+stage,exclusion_reason,2013-2014_previous_n,2015-2016_previous_n,2017-2018_previous_n,total_previous_n,2013-2014_excluded_n,2015-2016_excluded_n,2017-2018_excluded_n,total_excluded_n,2013-2014_retained_n,2015-2016_retained_n,2017-2018_retained_n,total_retained_n
+01_all_demo,Start with all DEMO records,10175,9971,9254,29400,0,0,0,0,10175,9971,9254,29400
+02_adults,Age missing or below 20,10175,9971,9254,29400,4406,4252,3685,12343,5769,5719,5569,17057
+03_no_prior_diabetes,DIQ010 is not explicitly No (2),5769,5719,5569,17057,899,978,1052,2929,4870,4741,4517,14128
+04_pregnancy_rule,Known pregnancy (RIDEXPRG=1),4870,4741,4517,14128,63,68,55,186,4807,4673,4462,13942
+05_mec_design,"Not MEC-examined, MEC weight not positive, or design fields missing",4807,4673,4462,13942,161,203,255,619,4646,4470,4207,13323
+06_cohort_a,HbA1c unavailable,4646,4470,4207,13323,160,236,203,599,4486,4234,4004,12724
+07_fpg_available,FPG unavailable,4486,4234,4004,12724,2316,2254,2085,6655,2170,1980,1919,6069
+08_cohort_b,No positive fasting weight,2170,1980,1919,6069,150,149,112,411,2020,1831,1807,5658

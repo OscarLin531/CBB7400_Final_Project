@@ -1,0 +1,3 @@
+# Only packages needed for data preparation and its tests.
+pandas>=2.2,<4
+numpy>=1.26,<3
